@@ -13,10 +13,10 @@ app.get("/", (req, res) => {
 
 // ---- LISTAR TAREAS ----
 app.get("/tasks", (req, res) => {
-  db.all("SELECT * FROM tasks", [], (err, rows) => {
+  db.all("SELECT * FROM tasks", [], (err, rows) => 
     if (err) return res.status(500).json({ error: err.message });
     res.json(rows);
-  });
+  );
 });
 
 // ---- CREAR TAREA ----
